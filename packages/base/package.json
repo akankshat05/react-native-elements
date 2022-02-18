@@ -1,6 +1,6 @@
 {
   "name": "@react-native-elements/base",
-  "version": "4.0.0-beta.0",
+  "version": "4.0.0-beta.1",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -29,8 +29,7 @@
     "test:watch": "jest --watch",
     "postinstall": "opencollective-postinstall || exit 0",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "clean-install": "rimraf node_modules && yarn",
-    "changelog": "auto-changelog -p"
+    "clean-install": "rimraf node_modules && yarn"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",

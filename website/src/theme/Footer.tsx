@@ -1,5 +1,6 @@
 import Link from '@docusaurus/Link';
 import React from 'react';
+<<<<<<< HEAD
 import useThemeContext from '@theme/hooks/useThemeContext';
 import Sponsor from '../components/Sponsor';
 
@@ -51,6 +52,12 @@ const more = [
 ];
 export default function Footer() {
   const { isDarkTheme } = useThemeContext();
+=======
+import { useColorMode } from '@docusaurus/theme-common';
+
+export default function Footer() {
+  const { isDarkTheme } = useColorMode();
+>>>>>>> upstream/next
   const darkFooter = isDarkTheme ? 'footer-dark' : '';
   return (
     <footer className={'footer ' + darkFooter}>
@@ -77,13 +84,21 @@ export default function Footer() {
               <li className="footer__item">
                 <a
                   className="footer__link-item"
+<<<<<<< HEAD
                   href="/docs/repo/contributing#setup"
+=======
+                  href="/docs/contributing#setup"
+>>>>>>> upstream/next
                 >
                   Setup Guide
                 </a>
               </li>
               <li className="footer__item">
+<<<<<<< HEAD
                 <a className="footer__link-item" href="/docs/repo/contributing">
+=======
+                <a className="footer__link-item" href="/docs/contributing">
+>>>>>>> upstream/next
                   Contribution Guide
                 </a>
               </li>
@@ -113,7 +128,11 @@ export default function Footer() {
                 </a>
               </li>
               <li className="footer__item">
+<<<<<<< HEAD
                 <a href="/#sponsor" className="footer__link-item">
+=======
+                <a href="/sponsor" className="footer__link-item">
+>>>>>>> upstream/next
                   Our Sponsors
                 </a>
               </li>

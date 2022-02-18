@@ -87,7 +87,11 @@ on the Avatar component, I'll need to document that in `/docs/avatar.md`.
 The component API in the `docs/main/` is auto-generated from the TSDoc in the TypeScript declarations. Be sure to update the documentation in the corresponding, run:
 
 ```bash
+<<<<<<< HEAD:CONTRIBUTING.md
 yarn docs:build:api
+=======
+yarn docs-build-api
+>>>>>>> upstream/next:website/docs/repo/contributing.md
 ```
 
 If you need to create any other doc page, you'll be creating your `.mdx` file in the `/docs/main` folder. Be sure to fill out the header at the top of the file:
@@ -184,7 +188,7 @@ setup on your local machine:
       packages
            base     # component without theme
            themed   # component using withTheme HOC
-           universe # component having universal device support
+           ....     # rest components having universal device support
       website
            docs     # prop API docs
            scripts  # scripts for autoDocGen
@@ -237,15 +241,15 @@ Scripts can be executed via `npm run [script]` or `yarn [script]`.
 - `typescript`- check for type build issue
 - `docs:serve`- start website
 - `docs:format`- format website docs
-- `docs:build`- build website
-- `docs:build:api`- build component prop APIs
+- `docs-build`- build website
+- `docs-build-api`- build component prop APIs
 
 ### Updating the component API documentation
 
 The component API in the `docs/main/` is auto-generated from the TSDoc in the TypeScript declarations. Be sure to update the documentation in the corresponding, run:
 
 ```bash
-yarn docs:build:api
+yarn docs-build-api
 ```
 
 ### Checks and how to fix them
@@ -255,7 +259,7 @@ yarn docs:build:api
 | `check_unit_tests` | Jest unit tests for packages | `yarn run test`       |
 | `check_types`      | Typescript type checks       | `yarn typescript`     |
 | `check_lint`       | Linting/formatting related   | `yarn lint`           |
-| `check_docs_api`   | component API                | `yarn docs:build:api` |
+| `check_docs_api`   | component API                | `yarn docs-build-api` |
 
 ### Committing and Pushing Changes
 

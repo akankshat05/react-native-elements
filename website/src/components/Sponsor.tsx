@@ -14,7 +14,11 @@ const OpenCollective: React.FC<{}> = () => (
           <h1 className="">{title}</h1>
           <div className="row">
             {items.map(({ title: userName, desc, link, img }, index) => (
+<<<<<<< HEAD
               <a
+=======
+              <Link
+>>>>>>> upstream/next
                 href={link}
                 key={index}
                 className={
@@ -41,7 +45,11 @@ const OpenCollective: React.FC<{}> = () => (
                   {userName && <h5 className="">@{userName}</h5>}
                   <p className="p--">{desc}</p>
                 </div>
+<<<<<<< HEAD
               </a>
+=======
+              </Link>
+>>>>>>> upstream/next
             ))}
           </div>
         </div>

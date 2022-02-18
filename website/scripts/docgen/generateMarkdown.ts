@@ -8,7 +8,7 @@ json2md.converters.header = function (input) {
         { hr: '' },
         { p: `id: ${input.id.toLowerCase()}` },
         { p: `title: ${input.id}` },
-        { p: `slug: /${input.id.toLowerCase()}` },
+        // { p: `slug: /${input.id.toLowerCase()}` },
         { hr: '' },
       ])
     : '';
@@ -49,7 +49,7 @@ json2md.converters.imports = function (input) {
   return input.component
     ? json2md([
         {
-          p: `import Usage from './usage/${input.component}/${input.component}.mdx'`,
+          p: `import Usage from './usage/${input.component}.mdx'`,
         },
         {
           p: `import { ${input.component} } from 'react-native-elements'`,

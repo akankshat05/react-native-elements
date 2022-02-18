@@ -1,12 +1,10 @@
 import React from 'react';
 import '../../static/css/components.css';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-const exampleCode = `
-import React from 'react';
+const exampleCode = `import React from 'react';
 import { Button } from '@react-native-elements/base';
 
-const AwesomeButton = () => (<Button title='Welcome'/>)
-`;
+const AwesomeButton = () => (<Button title='Welcome'/>)`;
 const Home: React.FunctionComponent<{}> = () => {
   return (
     <>
@@ -14,9 +12,9 @@ const Home: React.FunctionComponent<{}> = () => {
         <div className="container ">
           <div className="row" style={{ alignItems: 'center' }}>
             <div className="col col--5 text--center">
-              <h1 className="hero__title gradient clip-text">
+              <h6 className="hero__title gradient clip-text">
                 How to get started?
-              </h1>
+              </h6>
             </div>
             <div className="col col--7 ">
               <p>
@@ -25,11 +23,11 @@ const Home: React.FunctionComponent<{}> = () => {
                   <Highlight
                     {...defaultProps}
                     code={
-                      '$ yarn add @react-native-elements/base @react-native-elements/themed'
+                      'npm install @react-native-elements/base @react-native-elements/themed'
                     }
                     language="bash"
                     theme={
-                      require('prism-react-renderer/themes/vsDark').default
+                      require('prism-react-renderer/themes/dracula').default
                     }
                   >
                     {({
@@ -39,7 +37,7 @@ const Home: React.FunctionComponent<{}> = () => {
                       getLineProps,
                       getTokenProps,
                     }) => (
-                      <pre>
+                      <pre className={className} style={style}>
                         {tokens.map((line, i) => (
                           <div {...getLineProps({ line, key: i })}>
                             {line.map((token, key) => (
@@ -59,7 +57,7 @@ const Home: React.FunctionComponent<{}> = () => {
                     code={exampleCode}
                     language="tsx"
                     theme={
-                      require('prism-react-renderer/themes/vsDark').default
+                      require('prism-react-renderer/themes/dracula').default
                     }
                   >
                     {({
